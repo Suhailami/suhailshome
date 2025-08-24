@@ -1,37 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 
 const ContactSection = () => {
+  // ✅ State for form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
+  // ✅ Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // For now, just show a success message
-    alert("✅ Message sent successfully!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    emailjs
+      .send(
+        "service_4lgmtkj", // 🔹 Replace with your EmailJS Service ID
+        "template_xsr2qqn", // 🔹 Replace with your EmailJS Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "sultkh7bIPOvLb84e" // 🔹 Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          alert("✅ Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          alert("❌ Failed to send: " + error.text);
+        }
+      );
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  // ✅ Handle input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
     <section id="contact" className="section-padding bg-muted/30">
       <div className="container">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Get In Touch
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities and collaborations. Let's connect!
+            I'm always open to discussing new opportunities and collaborations.
+            Let's connect!
           </p>
         </div>
 
@@ -39,8 +66,11 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="card p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Contact Information</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-4">
+                {/* Email */}
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <Mail className="text-primary" size={20} />
@@ -56,6 +86,7 @@ const ContactSection = () => {
                   </div>
                 </div>
 
+                {/* Phone */}
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <Phone className="text-primary" size={20} />
@@ -71,20 +102,26 @@ const ContactSection = () => {
                   </div>
                 </div>
 
+                {/* Location */}
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <MapPin className="text-primary" size={20} />
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">Rajendra nagar,Hyderabad, India</p>
+                    <p className="text-muted-foreground">
+                      Rajendra Nagar, Hyderabad, India
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Social Links */}
             <div className="card p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Follow Me</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                Follow Me
+              </h3>
               <div className="flex gap-4">
                 <a
                   href="https://github.com/suhailami"
@@ -93,7 +130,10 @@ const ContactSection = () => {
                   className="p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors group"
                   aria-label="GitHub profile"
                 >
-                  <Github className="text-primary group-hover:scale-110 transition-transform" size={24} />
+                  <Github
+                    className="text-primary group-hover:scale-110 transition-transform"
+                    size={24}
+                  />
                 </a>
                 <a
                   href="https://linkedin.com/in/suhailahammad"
@@ -102,7 +142,10 @@ const ContactSection = () => {
                   className="p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors group"
                   aria-label="LinkedIn profile"
                 >
-                  <Linkedin className="text-primary group-hover:scale-110 transition-transform" size={24} />
+                  <Linkedin
+                    className="text-primary group-hover:scale-110 transition-transform"
+                    size={24}
+                  />
                 </a>
               </div>
             </div>
@@ -110,11 +153,17 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="card p-6">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Send a Message</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">
+              Send a Message
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
+                {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Name
                   </label>
                   <input
@@ -128,8 +177,13 @@ const ContactSection = () => {
                     placeholder="Your name"
                   />
                 </div>
+
+                {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -145,8 +199,12 @@ const ContactSection = () => {
                 </div>
               </div>
 
+              {/* Subject */}
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Subject
                 </label>
                 <input
@@ -161,8 +219,12 @@ const ContactSection = () => {
                 />
               </div>
 
+              {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -177,6 +239,7 @@ const ContactSection = () => {
                 />
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
                 className="btn-primary w-full flex items-center justify-center gap-2"
