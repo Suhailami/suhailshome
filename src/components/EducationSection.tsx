@@ -22,7 +22,7 @@ const EducationSection = () => {
     {
       degree: "Intermediate (12th Grade)",
       field: "Science (PCM)",
-      institution: "Kendriya Vidyalaya",
+      institution: "NARAYANA Junior college",
       location: "India",
       duration: "2019 - 2021",
       cgpa: "85%",
