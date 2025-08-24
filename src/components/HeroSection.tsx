@@ -9,7 +9,7 @@ const HeroSection = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = 'https://drive.google.com/file/d/13DLTzPZ4mnDX0GVRooKe11lD9atsMcDY/view?usp=sharing';
-    link.download = 'Suhail_Ahmad_Resume.pdf';
+    link.download = 'Suhail_Ahammad_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="container text-center space-y-8 animate-fade-in">
         <div className="space-y-4">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-            Suhail Ahmad
+            Suhail Ahammad
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
             VLSI Design Engineer & AI/ML Enthusiast
