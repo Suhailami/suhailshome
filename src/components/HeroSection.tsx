@@ -52,7 +52,7 @@ const HeroSection = () => {
 
         <div className="flex justify-center space-x-6 pt-8">
           <a
-            href="https://github.com/suhail3535"
+            href="https://github.com/suhailami"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-card rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -61,7 +61,7 @@ const HeroSection = () => {
             <Github size={24} className="text-foreground" />
           </a>
           <a
-            href="https://linkedin.com/in/suhail-ahmad-a39386213"
+            href="https://linkedin.com/in/suhailahammad"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-card rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -70,7 +70,7 @@ const HeroSection = () => {
             <Linkedin size={24} className="text-foreground" />
           </a>
           <a
-            href="mailto:suhailahmad3535@gmail.com"
+            href="mailto:suhailahammad_shaik@srmap.edu.in"
             className="p-3 bg-card rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Send email"
           >
