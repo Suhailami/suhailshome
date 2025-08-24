@@ -87,7 +87,7 @@ const handleSubmit = (e: React.FormEvent) => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">Lucknow, India</p>
+                    <p className="text-muted-foreground">Rajendra nagar,Hyderabad, India</p>
                   </div>
                 </div>
               </div>
