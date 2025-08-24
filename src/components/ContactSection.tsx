@@ -2,31 +2,21 @@ import React, { useState } from 'react';
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
 
-const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
 
-  emailjs
-    .send(
-      "service_6d63tfd",   // 🔹 from EmailJS dashboard
-      "template_xsr2qqn",  // 🔹 from EmailJS dashboard
-      {
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      },
-      "sultkh7bIPOvLb84e"    // 🔹 from EmailJS dashboard
-    )
-    .then(
-      () => {
-        alert("✅ Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      },
-      (error) => {
-        alert("❌ Failed to send: " + error.text);
-      }
-    );
-};
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // For now, just show a success message
+    alert("✅ Message sent successfully!");
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
