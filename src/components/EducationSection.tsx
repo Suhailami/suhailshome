@@ -6,12 +6,12 @@ const EducationSection = () => {
     {
       degree: "Bachelor of Technology (B.Tech)",
       field: "Electronics and Communication Engineering",
-      institution: "Integral University",
-      location: "Lucknow, India",
-      duration: "2021 - 2025",
-      cgpa: "8.5/10",
+      institution: "SRM University AP",
+      location: "Amaravathi, India",
+      duration: "2022 - 2026",
+      cgpa: "8.1/10",
       description: "Specialized in VLSI design, digital signal processing, and communication systems. Active member of technical societies and participated in various competitions.",
-      institutionUrl: "https://www.iul.ac.in/",
+      institutionUrl: "https://srmap.edu.in/",
       highlights: [
         "Specialized in VLSI Design and Digital Systems",
         "Member of IEEE Student Branch",
