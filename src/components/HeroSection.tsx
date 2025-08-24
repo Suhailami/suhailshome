@@ -3,12 +3,12 @@ import { Download, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
 
 const HeroSection = () => {
   const handleResumeView = () => {
-    window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
+    window.open('https://drive.google.com/file/d/13DLTzPZ4mnDX0GVRooKe11lD9atsMcDY/view?usp=sharing', '_blank', 'noopener,noreferrer');
   };
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = 'https://drive.google.com/file/d/13DLTzPZ4mnDX0GVRooKe11lD9atsMcDY/view?usp=sharing';
     link.download = 'Suhail_Ahmad_Resume.pdf';
     document.body.appendChild(link);
     link.click();
