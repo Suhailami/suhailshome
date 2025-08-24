@@ -23,7 +23,7 @@ const HeroSection = () => {
             Suhail Ahammad
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-            VLSI Design Engineer & AI/ML Enthusiast
+            AI/ML Engineer with specilized at Embedded system and IOT.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Passionate about digital circuit design, artificial intelligence, and creating innovative solutions
