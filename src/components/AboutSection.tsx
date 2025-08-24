@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A passionate engineer with expertise in VLSI design and artificial intelligence
+            A passionate engineer with expertise in Artificial intelligence and Machine Learning
           </p>
         </div>
 
@@ -16,9 +16,11 @@ const AboutSection = () => {
             <div className="card p-6">
               <h3 className="text-xl font-semibold mb-4">Professional Background</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I am a dedicated VLSI Design Engineer with a strong foundation in digital circuit design, 
-                artificial intelligence, and machine learning. Currently pursuing my B.Tech in Electronics 
-                and Communication Engineering at Integral University, Lucknow.
+                Enthusiastic ECE student with strong programming skills in C++, Python and JavaScript, now expanding into iOS
+development with Swift. Interested in AR/VR technologies and familiar with 3D graphics concepts. Quick learner
+with collaborative project experience, currently exploring ARKit and mobile app frameworks. Skilled in AI/ML,
+full-stack development (Python, HTML, CSS, JavaScript), RTL verification, testbench communication, and
+currently learning Japanese for global collaboration.
               </p>
             </div>
 
