@@ -48,10 +48,10 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <a
-                      href="mailto:suhailahmad3535@gmail.com"
+                      href="mailto:suhailahammad_shaik@srmap.edu.in"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      suhailahmad3535@gmail.com
+                      suhailahammad_shaik@srmap.edu.in
                     </a>
                   </div>
                 </div>
@@ -63,10 +63,10 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
                     <a
-                      href="tel:+919140725754"
+                      href="tel:+918309323607"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +91 9140725754
+                      +91 8309323607
                     </a>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const ContactSection = () => {
               <h3 className="text-xl font-semibold text-foreground mb-6">Follow Me</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/suhail3535"
+                  href="https://github.com/suhailami"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors group"
@@ -96,7 +96,7 @@ const ContactSection = () => {
                   <Github className="text-primary group-hover:scale-110 transition-transform" size={24} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/suhail-ahmad-a39386213"
+                  href="https://linkedin.com/in/suhailahammad"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors group"
