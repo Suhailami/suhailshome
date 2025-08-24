@@ -17,10 +17,10 @@ const AboutSection = () => {
               <h3 className="text-xl font-semibold mb-4">Professional Background</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Enthusiastic ECE student with strong programming skills in C++, Python and JavaScript, now expanding into iOS
-development with Swift. Interested in AR/VR technologies and familiar with 3D graphics concepts. Quick learner
-with collaborative project experience, currently exploring ARKit and mobile app frameworks. Skilled in AI/ML,
-full-stack development (Python, HTML, CSS, JavaScript), RTL verification, testbench communication, and
-currently learning Japanese for global collaboration.
+                development with Swift. Interested in AR/VR technologies and familiar with 3D graphics concepts. Quick learner
+                with collaborative project experience, currently exploring ARKit and mobile app frameworks. Skilled in AI/ML,
+                full-stack development (Python, HTML, CSS, JavaScript), RTL verification, testbench communication, and
+                currently learning Japanese for global collaboration.
               </p>
             </div>
 
