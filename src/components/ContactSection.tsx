@@ -15,17 +15,24 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Email validation
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      alert("❌ Please enter a valid email address.");
+      return;
+    }
+
     emailjs
       .send(
-        "service_4lgmtkj", // 🔹 Replace with your EmailJS Service ID
-        "template_xsr2qqn", // 🔹 Replace with your EmailJS Template ID
+        "service_6d63tfd", // 🔹 Your EmailJS Service ID
+        "template_xsr2qqn", // 🔹 Your EmailJS Template ID
         {
           name: formData.name,
           email: formData.email,
+          reply_to: formData.email, // 👈 Important for direct replies
           subject: formData.subject,
           message: formData.message,
         },
-        "sultkh7bIPOvLb84e" // 🔹 Replace with your EmailJS Public Key
+        "sultkh7bIPOvLb84e" // 🔹 Your EmailJS Public Key
       )
       .then(
         () => {
@@ -174,7 +181,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                    placeholder="Your name"
+                    placeholder="Your full name"
                   />
                 </div>
 
@@ -184,7 +191,7 @@ const ContactSection = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-foreground mb-2"
                   >
-                    Email
+                    Your Email (required)
                   </label>
                   <input
                     type="email"
@@ -194,7 +201,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                    placeholder="your.email@example.com"
+                    placeholder="example@email.com"
                   />
                 </div>
               </div>
@@ -235,7 +242,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-vertical"
-                  placeholder="Your message..."
+                  placeholder="Write your message here..."
                 />
               </div>
 
