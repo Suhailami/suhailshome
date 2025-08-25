@@ -23,7 +23,7 @@ const ContactSection = () => {
 
     emailjs
       .send(
-        "service_6d63tfd", // 🔹 Your EmailJS Service ID
+        "service_4lgmtkj", // 🔹 Your EmailJS Service ID
         "template_xsr2qqn", // 🔹 Your EmailJS Template ID
         {
           name: formData.name,
