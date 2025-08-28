@@ -4,44 +4,73 @@ import { Github, ExternalLink, Download } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Sign Language Recognition System",
-      description: "Developed a real-time sign language recognition system using computer vision and machine learning techniques. The system can accurately identify and translate sign language gestures into text.",
-      technologies: ["Python", "OpenCV", "TensorFlow", "Machine Learning", "Computer Vision"],
-      githubUrl: "https://github.com/suhail3535/sign-language-recognition",
+      title: "Real-Time Image Restoration in Automotive Systems",
+      description: "Developed a Real-Time Image Restoration Dashboard capable of processing deteriorated images, restoring them with improved clarity, and displaying live results with SSIM and PSNR metrics for quality evaluation. Achieved real-time performance enhancing automotive safety in adverse conditions.",
+      technologies: ["Deep Learning", "CNN", "JavaScript", "HTML/CSS", "Jetson Nano", "Computer Vision"],
+      githubUrl: "https://github.com/Suhailami/Real-Time-Image-Restoration",
       liveUrl: "#",
       downloadUrl: "#",
-      category: "AI/ML"
+      category: "AI/ML",
+      featured: true
     },
     {
-      title: "VLSI Processor Design",
-      description: "Designed and implemented a 32-bit RISC processor using Verilog HDL. The design includes complete instruction set architecture, pipeline implementation, and comprehensive verification.",
-      technologies: ["Verilog", "VLSI Design", "Digital Logic", "FPGA", "SystemVerilog"],
-      githubUrl: "https://github.com/suhail3535/risc-processor",
+      title: "Car Price Prediction using AI/ML (Patent Filed)",
+      description: "Designed and implemented an AI/ML-based predictive model leveraging regression and feature engineering to estimate vehicle prices. Improved prediction accuracy by 15–20% compared to baseline methods and successfully filed for patent.",
+      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Machine Learning"],
+      githubUrl: "https://github.com/Suhailami/Car-Price-Prediction",
       liveUrl: "#",
       downloadUrl: "#",
-      category: "VLSI"
+      category: "AI/ML",
+      patent: true
     },
     {
-      title: "Smart Traffic Management System",
-      description: "IoT-based traffic management system using machine learning algorithms to optimize traffic flow. Includes real-time monitoring and adaptive signal control.",
-      technologies: ["IoT", "Python", "Machine Learning", "Arduino", "Sensors"],
-      githubUrl: "https://github.com/suhail3535/smart-traffic",
+      title: "Smart Irrigation System for Precision Farming",
+      description: "Designed an IoT-based Smart Irrigation System that monitors soil moisture, weather data, and automates water delivery using embedded control. Enabled 20–30% water savings and improved crop health monitoring.",
+      technologies: ["Arduino", "IoT Sensors", "Embedded Systems", "Figma", "Automation"],
+      githubUrl: "https://github.com/Suhailami/Smart-Irrigation-System",
       liveUrl: "#",
       downloadUrl: "#",
       category: "IoT"
     },
     {
-      title: "Digital Signal Processing Filter",
-      description: "Implementation of various digital filters (FIR, IIR) in both software (MATLAB/Python) and hardware (Verilog). Includes performance analysis and optimization.",
-      technologies: ["MATLAB", "Python", "Verilog", "DSP", "Signal Processing"],
-      githubUrl: "https://github.com/suhail3535/dsp-filters",
+      title: "Medical Image Analysis using CNN (X-ray Defect Detection)",
+      description: "Built a CNN-based deep learning model for automatic defect detection in X-ray images. Achieved high diagnostic accuracy, reducing manual analysis time by 40% and demonstrating potential for faster clinical decision support.",
+      technologies: ["Deep Learning", "CNN", "Python", "TensorFlow", "Keras", "OpenCV"],
+      githubUrl: "https://github.com/Suhailami/Medical-image-analysis-using-CNN",
       liveUrl: "#",
       downloadUrl: "#",
-      category: "DSP"
+      category: "AI/ML"
+    },
+    {
+      title: "Drone Automation for Waste Collection & Management",
+      description: "Designed a drone-based system with automated waste detection, collection, and communication modules. Implemented image processing algorithms for waste identification and circuit design in KiCad for embedded drone automation.",
+      technologies: ["Computer Vision", "OpenCV", "Drones", "Jetson Nano", "KiCad", "Embedded Systems"],
+      githubUrl: "https://github.com/Suhailami/Drone-Waste-Management",
+      liveUrl: "#",
+      downloadUrl: "#",
+      category: "IoT"
+    },
+    {
+      title: "Stacked Autoencoder with L21-norm Regularization",
+      description: "Implemented a robust stacked autoencoder with L21-norm loss and structural sparsity regularization for efficient feature extraction. Reduced computational complexity while improving robustness to noisy/outlier data.",
+      technologies: ["Python", "Deep Learning", "TensorFlow", "Optimization", "Neural Networks"],
+      githubUrl: "https://github.com/Suhailami/Stacked-Autoencoder-L21",
+      liveUrl: "#",
+      downloadUrl: "#",
+      category: "AI/ML"
+    },
+    {
+      title: "Antenna Design for 7.7 GHz Applications",
+      description: "Designed a microstrip antenna on FR4 substrate using CST Microwave Studio with step-by-step IEEE-standard calculations. Achieved precise resonance at 7.7 GHz with strong potential for radar and communication systems.",
+      technologies: ["CST Microwave Studio", "AutoCAD", "Electromagnetics", "VLSI", "RF Design"],
+      githubUrl: "https://github.com/Suhailami/Antenna-Design-7.7GHz",
+      liveUrl: "#",
+      downloadUrl: "#",
+      category: "VLSI"
     }
   ];
 
-  const categories = ["All", "VLSI", "AI/ML", "IoT", "DSP"];
+  const categories = ["All", "AI/ML", "IoT", "VLSI"];
   const [activeCategory, setActiveCategory] = React.useState("All");
 
   const filteredProjects = activeCategory === "All" 
@@ -54,7 +83,7 @@ const ProjectsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my technical projects spanning VLSI design, AI/ML, IoT, and digital signal processing
+            Innovative projects spanning AI/ML, IoT, and VLSI design with real-world impact and patent recognition
           </p>
         </div>
 
@@ -83,9 +112,21 @@ const ProjectsSection = () => {
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">
-                    {project.category}
-                  </span>
+                  <div className="flex gap-2">
+                    {project.patent && (
+                      <span className="px-2 py-1 bg-accent text-accent-foreground rounded text-xs font-medium">
+                        Patent Filed
+                      </span>
+                    )}
+                    {project.featured && (
+                      <span className="px-2 py-1 bg-primary text-primary-foreground rounded text-xs font-medium">
+                        Featured
+                      </span>
+                    )}
+                    <span className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-medium">
+                      {project.category}
+                    </span>
+                  </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}

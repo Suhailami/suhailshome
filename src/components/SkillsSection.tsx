@@ -3,43 +3,69 @@ import React from 'react';
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "VLSI & Hardware Design",
-      skills: [
-        { name: "Verilog/SystemVerilog", level: 90 },
-        { name: "VHDL", level: 85 },
-        { name: "Cadence Tools", level: 80 },
-        { name: "Xilinx Vivado", level: 85 },
-        { name: "ModelSim", level: 80 }
-      ]
-    },
-    {
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "C/C++", level: 85 },
-        { name: "MATLAB", level: 80 },
-        { name: "JavaScript", level: 75 },
-        { name: "SQL", level: 70 }
+        { name: "Python", level: 95 },
+        { name: "C/C++", level: 90 },
+        { name: "Java", level: 85 },
+        { name: "JavaScript", level: 80 },
+        { name: "MATLAB", level: 90 },
+        { name: "HTML/CSS", level: 85 }
       ]
     },
     {
-      title: "AI/ML & Data Science",
+      title: "AI/ML & Deep Learning",
       skills: [
-        { name: "Machine Learning", level: 85 },
-        { name: "Deep Learning", level: 80 },
-        { name: "TensorFlow/Keras", level: 75 },
-        { name: "Computer Vision", level: 70 },
-        { name: "Data Analysis", level: 80 }
+        { name: "CNNs & Autoencoders", level: 95 },
+        { name: "TensorFlow/Keras", level: 90 },
+        { name: "OpenCV", level: 90 },
+        { name: "Scikit-learn", level: 85 },
+        { name: "Transfer Learning", level: 85 },
+        { name: "Computer Vision", level: 90 }
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "Embedded Systems & IoT",
       skills: [
-        { name: "Git/GitHub", level: 85 },
-        { name: "Linux", level: 80 },
-        { name: "Docker", level: 70 },
-        { name: "PCB Design", level: 75 },
-        { name: "Embedded Systems", level: 80 }
+        { name: "ARM Cortex-M", level: 85 },
+        { name: "Arduino", level: 90 },
+        { name: "Jetson Nano", level: 85 },
+        { name: "IoT Automation", level: 90 },
+        { name: "GPIO/PWM/ADC", level: 85 },
+        { name: "Serial Communication", level: 80 }
+      ]
+    },
+    {
+      title: "VLSI & Hardware Design",
+      skills: [
+        { name: "CMOS/VLSI Design", level: 85 },
+        { name: "Cadence Tools", level: 80 },
+        { name: "Xilinx Vivado", level: 85 },
+        { name: "CST Microwave Studio", level: 85 },
+        { name: "RTL/FPGA/ASIC", level: 80 },
+        { name: "Antenna Design", level: 85 }
+      ]
+    },
+    {
+      title: "Design & Simulation Tools",
+      skills: [
+        { name: "Figma", level: 85 },
+        { name: "KiCad", level: 80 },
+        { name: "AutoCAD", level: 75 },
+        { name: "GitHub", level: 90 },
+        { name: "MongoDB", level: 75 },
+        { name: "React/Tailwind", level: 80 }
+      ]
+    },
+    {
+      title: "Specialized Skills",
+      skills: [
+        { name: "Patent Filing", level: 95 },
+        { name: "Japanese Language", level: 70 },
+        { name: "Research Writing", level: 90 },
+        { name: "Technical Presentation", level: 85 },
+        { name: "Cross-disciplinary AI", level: 90 },
+        { name: "Problem Solving", level: 95 }
       ]
     }
   ];
