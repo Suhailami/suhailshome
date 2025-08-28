@@ -4,40 +4,80 @@ import { ExternalLink, Award, Calendar } from 'lucide-react';
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Machine Learning Specialization",
-      issuer: "Coursera (Stanford University)",
-      date: "2023",
-      description: "Comprehensive course covering supervised learning, unsupervised learning, and best practices in machine learning.",
-      certificateUrl: "https://coursera.org/verify/specialization/ABC123",
-      skills: ["Machine Learning", "Python", "TensorFlow", "Neural Networks"],
-      credentialId: "ABC123XYZ"
+      title: "GenAI Powered Data Analytics Job Simulation",
+      issuer: "TATA Forage",
+      date: "July 2025",
+      description: "Completed practical tasks in exploratory data analysis, risk profiling, predicting delinquency with AI, business report and data storytelling for collections strategy, and implementing AI-driven collections strategy.",
+      certificateUrl: "#",
+      skills: ["Data Analytics", "GenAI", "Risk Profiling", "Business Intelligence", "Collections Strategy"],
+      credentialId: "AP22110020064",
+      featured: true
     },
     {
-      title: "Digital VLSI Design",
-      issuer: "NPTEL (IIT)",
-      date: "2023",
-      description: "Advanced course on VLSI design methodologies, covering digital circuit design, verification, and implementation.",
-      certificateUrl: "https://nptel.ac.in/verify/certificate/DEF456",
-      skills: ["VLSI Design", "Verilog", "Digital Circuits", "FPGA"],
-      credentialId: "DEF456XYZ"
+      title: "Data Analytics Job Simulation",
+      issuer: "Deloitte",
+      date: "July 2025",
+      description: "Completed practical tasks in data analysis and forensic technology, demonstrating proficiency in analytical thinking and problem-solving methodologies.",
+      certificateUrl: "#",
+      skills: ["Data Analysis", "Forensic Technology", "Problem Solving", "Analytics"],
+      credentialId: "AP22110020064",
+      featured: true
     },
     {
-      title: "Deep Learning Specialization",
-      issuer: "Coursera (deeplearning.ai)",
-      date: "2023",
-      description: "In-depth study of deep learning techniques including CNNs, RNNs, and advanced neural network architectures.",
-      certificateUrl: "https://coursera.org/verify/specialization/GHI789",
-      skills: ["Deep Learning", "CNN", "RNN", "TensorFlow", "Keras"],
-      credentialId: "GHI789XYZ"
+      title: "MongoDB Developer Certification",
+      issuer: "MongoDB University",
+      date: "2024",
+      description: "Professional certification in MongoDB database development, covering document modeling, aggregation framework, and performance optimization.",
+      certificateUrl: "#",
+      skills: ["MongoDB", "NoSQL", "Database Design", "Aggregation", "Performance Tuning"],
+      credentialId: "MONGO_DEV_2024",
+      featured: true
     },
     {
-      title: "Embedded Systems Programming",
-      issuer: "IEEE Certification",
-      date: "2022",
-      description: "Certification in embedded systems programming, microcontroller interfacing, and real-time system design.",
-      certificateUrl: "https://ieee.org/verify/JKL012",
-      skills: ["Embedded Systems", "C/C++", "Microcontrollers", "Real-time Systems"],
-      credentialId: "JKL012XYZ"
+      title: "Oracle Database Certification",
+      issuer: "Oracle Corporation",
+      date: "2024",
+      description: "Oracle Certified Associate certification demonstrating expertise in database fundamentals, SQL, and PL/SQL programming.",
+      certificateUrl: "#",
+      skills: ["Oracle Database", "SQL", "PL/SQL", "Database Administration", "Performance Optimization"],
+      credentialId: "OCA_DB_2024",
+      featured: true
+    },
+    {
+      title: "Deep Learning Onramp",
+      issuer: "MathWorks Training Services",
+      date: "April 2025",
+      description: "Successfully completed 100% of the self-paced training course on deep learning fundamentals and neural network implementation.",
+      certificateUrl: "#",
+      skills: ["Deep Learning", "Neural Networks", "MATLAB", "Machine Learning"],
+      credentialId: "MATHWORKS_DL_2025"
+    },
+    {
+      title: "Control Design Onramp with Simulink",
+      issuer: "MathWorks Training Services",
+      date: "February 2024",
+      description: "Successfully completed 100% of the self-paced training course on control system design using Simulink.",
+      certificateUrl: "#",
+      skills: ["Control Systems", "Simulink", "MATLAB", "System Design"],
+      credentialId: "MATHWORKS_CTRL_2024"
+    },
+    {
+      title: "MATLAB Onramp",
+      issuer: "MathWorks Training Services",
+      date: "January 2024",
+      description: "Successfully completed 100% of the self-paced training course covering MATLAB fundamentals and programming concepts.",
+      certificateUrl: "#",
+      skills: ["MATLAB", "Programming", "Data Analysis", "Scientific Computing"],
+      credentialId: "MATHWORKS_MATLAB_2024"
+    },
+    {
+      title: "Simulink Onramp",
+      issuer: "MathWorks Training Services",
+      date: "January 2024",
+      description: "Successfully completed 100% of the self-paced training course on Simulink modeling and simulation fundamentals.",
+      certificateUrl: "#",
+      skills: ["Simulink", "Modeling", "Simulation", "MATLAB"],
+      credentialId: "MATHWORKS_SIM_2024"
     }
   ];
 
